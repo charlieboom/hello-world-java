@@ -3,3 +3,26 @@ service:
   identifier: helloworldjavadev
   orgIdentifier: default
   projectIdentifier: default_project
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: DEV
+            type: HelmChart
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: CharlieGitHub
+                  gitFetchType: Branch
+                  folderPath: /helm-templates/dev
+                  repoName: cb-helm-charts
+                  branch: main
+              subChartPath: ""
+              valuesPaths:
+                - manifests/hello-word-java/values.yaml
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              helmVersion: V3
+              fetchHelmChartMetadata: false
+    type: Kubernetes
