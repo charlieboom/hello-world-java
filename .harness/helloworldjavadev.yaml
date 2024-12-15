@@ -20,7 +20,7 @@ service:
                   branch: main
               subChartPath: ""
               valuesPaths:
-                - manifests/hello-word-java/values.yaml
+                - manifests/hello-world-java/values.yaml
               skipResourceVersioning: false
               enableDeclarativeRollback: false
               helmVersion: V3
