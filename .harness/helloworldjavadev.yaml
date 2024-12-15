@@ -15,7 +15,7 @@ service:
                 spec:
                   connectorRef: CharlieGitHub
                   gitFetchType: Branch
-                  folderPath: /helm-templates/dev
+                  folderPath: " /helm-templates/dev"
                   repoName: cb-helm-charts
                   branch: main
               subChartPath: ""
