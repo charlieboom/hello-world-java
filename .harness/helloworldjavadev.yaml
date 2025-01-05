@@ -31,7 +31,7 @@ service:
           sources:
             - spec:
                 connectorRef: CharlieDockerhub
-                imagePath: charlieboom/java-hello-world
+                imagePath: charlieboom/<+pipeline.name>
                 tag: <+pipeline.name><+pipeline.sequenceId>
                 digest: ""
               identifier: javahelloworld
