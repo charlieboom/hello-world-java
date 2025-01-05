@@ -25,4 +25,15 @@ service:
               enableDeclarativeRollback: false
               helmVersion: V3
               fetchHelmChartMetadata: false
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - spec:
+                connectorRef: CharlieDockerhub
+                imagePath: charlieboom/java-hello-world
+                tag: <+pipeline.name><+pipeline.sequenceId>
+                digest: ""
+              identifier: javahelloworld
+              type: DockerRegistry
     type: Kubernetes
