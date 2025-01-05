@@ -1,6 +1,6 @@
 pipeline:
   name: java-hello-world
-  identifier: java-hello-world
+  identifier: javahelloworld
   tags: {}
   template:
     templateRef: javacicd
