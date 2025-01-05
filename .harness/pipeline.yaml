@@ -1,0 +1,15 @@
+pipeline:
+  name: java-hello-world
+  identifier: java-hello-world
+  tags: {}
+  template:
+    templateRef: javacicd
+    versionLabel: v0.1.0
+    gitBranch: main
+    templateInputs:
+      properties:
+        ci:
+          codebase:
+            build: <+input>
+  projectIdentifier: default_project
+  orgIdentifier: default
