@@ -32,7 +32,7 @@ service:
             - spec:
                 connectorRef: CharlieDockerhub
                 imagePath: charlieboom/<+pipeline.name>
-                tag: <+pipeline.name><+pipeline.sequenceId>
+                tag: <+input>.default(<+pipeline.name><+pipeline.sequenceId>)
                 digest: ""
               identifier: javahelloworld
               type: DockerRegistry
